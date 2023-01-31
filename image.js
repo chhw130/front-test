@@ -1,6 +1,6 @@
 
 
-// fetch("http://43.201.103.199/",{
+// fetch("http://43.201.103.199/post",{
 //     method: "POST",
 //     headers: {
 //         "Content-Type" : "application/json",
@@ -12,23 +12,32 @@
 //     }),
 // })
 
-let title = "타이틀"
-let content = "콘텐츠"
-let image = "ㅁㄴ아ㅣ룹힏ㅈ"
+// let title = "타이틀"
+// let content = "콘텐츠"
+// let image = "ㅁㄴ아ㅣ룹힏ㅈ"
 
-fetch('http://43.201.103.199/post',{
-    method : 'POST',
-    body : JSON.stringify({
-            title : title,
-            content : content,
-            image : image
-    }),
-})
-.then((response) => response.json())
-.then((result) => console.log(result));
-
-
-
-// fetch('http://43.201.103.199/post/:30')
+// fetch('http://43.201.103.199/post',{
+//     method : 'POST',
+//     headers : {
+//         "Content-type" : "application/json; charset=UTF-8"
+//     },
+//     body : JSON.stringify({
+//             title : title,
+//             content : content,
+//             image : image
+//     }),
+// })
 // .then((response) => response.json())
 // .then((result) => console.log(result));
+
+
+// let imgdata = ""
+// fetch('https://api.unsplash.com/photos/random?client_id=O7HkjXaX9lt1gg6L429iqP77MPYMlzGc7ZnC4-9pWX8')
+// .then((response) => response.json())
+// .then((result) => {
+
+
+//     imgdata = result.urls.raw
+//     console.log(imgdata)
+// }
+// );
