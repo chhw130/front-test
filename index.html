@@ -16,7 +16,7 @@
     </div>
 
     <div id="container2">
-        <button id="goBack" class="goBack"><</button>
+        <button class="goBack" id="goBack"><</button>
         <button class="new" id="newImg">새로운 이미지를 추가하기</button>
         <form id="inputForm">
             <input id="newTitles" type="text" minlength="3" placeholder="글 제목을 작성해주세요.">
@@ -24,16 +24,19 @@
             <button class="new" disabled="disabled" id="writeBtn">글 작성하기</button>
         </form>
     </div>
+    <div>
 
-    <div id="container3">
-        <button class="goBack"><</button>
-        <div id="modifyBtn">
-
-            <button id="mod">수정📝📝
-            </button>
-            <button id="del">삭제✂️✂️✂️</button>
+        <div id="container3">
+            <button class="goBack" id="goBack2"><</button>
+            <div id="modifyBtn">
+                
+                <button id="mod">수정📝📝
+                </button>
+                <button id="del">삭제✂️✂️✂️</button>
+            </div>
         </div>
     </div>
+    
 
     <div id="modal" class="modal-overlay">
         <div class="modal-window">
@@ -42,7 +45,6 @@
             </div>
             <div class="close-area">X</div>
             <div class="content">
-                <p>Img</p>
                 <p>Title</p>
                 <input id="modTitle" class="modData" type="text" minlength="3" placeholder="수정할 제목을 작성해주세요.">
 
@@ -61,6 +63,7 @@
     <script src="./image.js"></script>
     <script src="./mainPage.js"></script>
     <script src="./modify.js"></script>
+    <script src="./comments.js"></script>
     
 </body>
 </html>

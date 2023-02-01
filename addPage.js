@@ -1,4 +1,5 @@
-const goBack = document.querySelector(".goBack");
+const goBack = document.querySelector("#goBack");
+// const goBack2 = document.querySelector("#goBack2");
 const newImg = document.querySelector("#newImg");
 const writeBtn = document.querySelector("#writeBtn");
 const newTitles = document.querySelector("#newTitles");
@@ -9,9 +10,12 @@ let imgData = "";
 let titleData = "";
 let contentData = "";
 
-function goBakcHandler() {
+function goBackHandler() {
   location.reload();
 }
+
+goBack.addEventListener("click", goBackHandler);
+goBack.addEventListener("click", goBackHandler);
 
 newTitles.addEventListener("change", (event) => {
   titleData = event.target.value;
@@ -42,7 +46,6 @@ const addImgHandler = () => {
     .then((response) => response.json())
     .then((result) => {
       imgData = result.urls.raw;
-      console.log(imgData);
     });
   newImg.style.backgroundColor = "grey";
 };

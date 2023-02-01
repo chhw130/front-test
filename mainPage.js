@@ -7,7 +7,7 @@ fetch("http://43.201.103.199/posts")
   .then((response) => response.json())
   .then((datas) => {
     apiContents = datas.data.posts;
-    // console.log(apiContents)
+    console.log(apiContents);
 
     for (apiContent of apiContents) {
       const apiData = apiContent;
@@ -15,13 +15,13 @@ fetch("http://43.201.103.199/posts")
       // console.log(apiContent)
       const li = document.createElement("li");
       const liDiv = document.createElement("div");
-      const liTitle = document.createElement("a");
+      const liTitle = document.createElement("h2");
       const liContent = document.createElement("a");
       const liImg = document.createElement("img");
 
       liDiv.setAttribute("class", "liDiv");
 
-      liTitle.innerText = `Title : ${apiData.title}`;
+      liTitle.innerText = `${apiData.title}`;
       liContent.innerText = `Content : ${apiData.content}`;
 
       //사진 속성 추가하고 링크넣기

@@ -15,6 +15,10 @@ body {
   margin: 1.5em 7em 0 0;
 }
 
+#inputForm {
+  text-align: center;
+}
+
 /* 뒤로가기버튼 */
 .goBack {
   position: fixed;
@@ -26,10 +30,9 @@ body {
 }
 
 .new {
-  background-color: aquamarine;
+  background-color: aliceblue;
   height: 5em;
   width: 28em;
-  display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
@@ -37,10 +40,23 @@ body {
 }
 
 #itemList {
-  background-color: burlywood;
-  width: 20.5em;
+  background-color: aliceblue;
+  width: 50em;
   height: 70%;
   list-style: none;
+  padding: 0;
+  margin-top: 3em;
+}
+
+.mainPageContent {
+  margin: 3em;
+  display: flex;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgb(0 0 0 / 15%);
+  background-color: white;
+}
+.contentImg {
+  margin: 20px;
 }
 
 .contentImg {
@@ -51,6 +67,7 @@ body {
 .liDiv {
   display: flex;
   flex-direction: column;
+  margin: 0.6em 0 0 0.5em;
 }
 
 /* container2 */
@@ -64,14 +81,14 @@ body {
 }
 
 #newTitles {
-  width: 20.5em;
+  width: 24em;
   margin-top: 15px;
   font-size: 15px;
   border-radius: 8px;
 }
 
 #newContents {
-  width: 20.5em;
+  width: 24em;
   margin: 15px 0px 10px 0px;
   font-size: 15px;
   padding-bottom: 10em;
@@ -122,7 +139,7 @@ body {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   width: 400px;
-  height: 400px;
+  height: 250px;
   position: relative;
   top: 10px;
   padding: 10px;
