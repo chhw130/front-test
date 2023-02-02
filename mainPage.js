@@ -1,5 +1,5 @@
 const del = document.querySelector("#del");
-
+const detailData = document.querySelector("#detailData");
 let apiContents = "";
 let apiId = "";
 
@@ -41,11 +41,40 @@ fetch("http://43.201.103.199/posts")
         imgDetail.setAttribute("class", "patchImg");
         imgDetail.setAttribute("src", apiData.image);
 
-        console.log((apiId = apiData.postId));
+        fetch(`http://43.201.103.199/post/${apiData.postId}`) //
+          .then((res) => res.json())
+          .then((res) => {
+            const commentsList = document.querySelector("#commentsList");
+            const commentDatas = res.data.comments;
 
-        container3.appendChild(imgDetail);
-        container3.appendChild(liTitle);
-        container3.appendChild(liContent);
+            for (commentData of commentDatas) {
+              const commentList = document.createElement("li");
+              const commentDelBtn = document.createElement("button");
+
+              commentDelBtn.innerText = "삭제";
+              commentList.setAttribute("class", "mainPageContent");
+              commentList.innerText = commentData.content;
+              commentList.appendChild(commentDelBtn);
+              commentsList.appendChild(commentList);
+
+              commentDelBtn.addEventListener("click", commentDelBtnHandler);
+              function commentDelBtnHandler({ target }) {
+                fetch(
+                  `http://43.201.103.199/comment/${commentData.commentId}`,
+                  {
+                    method: "DELETE",
+                  }
+                )
+                  .then((response) => response.json())
+                  .then((data) => {
+                    location.reload();
+                  });
+              }
+            }
+          });
+        detailData.appendChild(imgDetail);
+        detailData.appendChild(liTitle);
+        detailData.appendChild(liContent);
 
         console.log(event.target);
 
@@ -68,4 +97,4 @@ fetch("http://43.201.103.199/posts")
     }
   });
 
-setTimeout("console.log(apiContents)", 2000);
+// setTimeout("console.log(apiContents)", 2000);

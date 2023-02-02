@@ -1,5 +1,3 @@
-
-
 // fetch("http://43.201.103.199/post",{
 //     method: "POST",
 //     headers: {
@@ -30,12 +28,10 @@
 // .then((response) => response.json())
 // .then((result) => console.log(result));
 
-
 // let imgdata = ""
 // fetch('https://api.unsplash.com/photos/random?client_id=O7HkjXaX9lt1gg6L429iqP77MPYMlzGc7ZnC4-9pWX8')
 // .then((response) => response.json())
 // .then((result) => {
-
 
 //     imgdata = result.urls.raw
 //     console.log(imgdata)
